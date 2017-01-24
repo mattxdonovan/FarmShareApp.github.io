@@ -1,0 +1,18 @@
+<div class="backgroundResults overFlow">
+<br>
+<h1 class="center2">Farm Listings</h1>
+<div class="container col-sm-offset-1 col-sm-10 marginBottom">
+  <div class="card transparent">
+    <div class="card-group" ng-repeat="r in data">
+      <img height="200" width="300" class="card-img-top col-sm-3 padding5px" src="{{r.imageUrl}}" alt="Card image cap">
+      <br>
+      <div class="card card-block cardBack col-sm-8 col-sm-offset-0">
+        <h1 class = 'card-title'>{{r.farmName}}</h1>
+        <h3 class="card-title">{{r.info}}</h3>
+        <p class="card-text">{{r.location}}</p>
+        <a href="/#/farm/farminfo/{{r.user_id}}" class="btn btn-primary pull-right">Visit: {{r.farmName}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

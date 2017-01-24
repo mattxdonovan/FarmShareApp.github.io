@@ -1,0 +1,87 @@
+<ion-view view-title="landing">
+ <ion-content>
+<body>
+<!-- Main Container -->
+<div class="container">
+ <!-- headerbar -->
+ <!-- <header> <a href="">
+   <h4>FarmShare</h4>
+   </a>
+ </header> -->
+
+ <!-- Hero Section -->
+ <section class="hero" id="hero">
+   <h2 class="hero_header">FARM <span class="light">SHARE</span></h2>
+   <p class="tagline">Sharing is caring</p>
+ </section>
+
+ <!-- Stats Gallery Section -->
+ <div class="gallery">
+   <div class="thumbnail"><img class="img-rounded" alt="140x140" src="/eggs.jpg" data-holder-rendered="true">
+     <h1 class="stats">Eggs</h1>
+     <h4>Farm Fresh Eggs</h4>
+     <p>Items Available: {{}}</p>
+   </div>
+
+   <div class="thumbnail"><img class="img-rounded" alt="140x140" src="/produce.jpg" data-holder-rendered="true">
+     <h1 class="stats">Fresh Produce</h1>
+     <h4>Fresh Seasonal Produce</h4>
+     <p>Items Available: {{}}</p>
+   </div>
+
+   <div class="thumbnail"><img class="img-rounded" alt="140x140" src="/meat.jpg" data-holder-rendered="true">
+     <h1 class="stats">Meat & Poultry</h1>
+     <h4>Farm Raised Meat & Poultry</h4>
+     <p>Items Available: {{}}</p>
+   </div>
+
+   <div class="thumbnail"><img class="img-rounded" alt="140x140" src="milk.jpg" data-holder-rendered="true">
+     <h1 class="stats">Other Items</h1>
+     <h4>Etc...</h4>
+     <p>Items Available: {{}}</p>
+   </div>
+
+   <div ng-repeat="p in data" class="thumbnail">
+     {{p.productName}}
+     {{p.price}}
+     {{p.description}}
+     {{p.organic}}
+   </div>
+ </div>
+ <!-- More Info Section -->
+ <footer>
+   <article class="footer_column">
+     <h3>ABOUT</h3>
+     <img src="/urbanFarm.jpg" alt="" width="400 !important" height="200 !important" class="cards"/>
+     <br>
+     <p>About The Urban Farm
+        The Urban Farm at Stapleton began in 1993 when its founders started a program for 15 inner city youth to learn about horses at a private farm. It subsequently expanded its programming to include animal and plant programs.
+
+        The Urban Farm has evolved into an educational campus devoted to developing the full potential of its participants through equine education, animal husbandry and horticulture in an intimate farm setting. In addition to its educational programs, The Urban Farm also provides an important and educational visitor attraction to the Northeast Denver area, as well as a unique and attractive venue for mission related activities and events.</p>
+   </article>
+   <article class="footer_column">
+     <h3>LOCATION</h3>
+     <img src="/mapFarm.jpg" alt="" width="400 !important" height="200 !important" class="cards"/>
+     <br>
+     <p>We are located right after exit 279 from I-70 E.
+       The Urban Farm at Stapleton
+       10200 Smith Rd
+       Denver, Colorado 80239
+       303-307-9332
+     The Urban Farm has evolved into an educational campus devoted to developing the full potential of its participants through equine education, animal husbandry and horticulture in an intimate farm setting. In addition to its educational programs, The Urban Farm also provides an important and educational visitor attraction to the Northeast Denver area, as well as a unique and attractive venue for mission related activities and events.
+    It subsequently expanded its programming to include animal and plant programs.
+    Make it out to experience farming done right! </p>
+   </article>
+ </footer>
+ <!-- Footer Section -->
+ <section class="footer_banner" id="contact">
+   <p class="hero_header">Thank You For Visiting FarmShare</p>
+ </section>
+ <!-- Copyrights Section -->
+ <div class="copyright">&copy;2016 - <strong>FarmShare</strong></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+
+</ion-content>
+</ion-view>

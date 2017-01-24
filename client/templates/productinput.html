@@ -1,0 +1,56 @@
+<ion-view view-title="productForm">
+  <ion-content>
+    <div class="container2">
+    <section class="hero2" id="hero2">
+   <div>
+     <div class="formContain" ng-show="showProduct">
+       <h1 class="marginBottom">Add Product</h1>
+       <form class="marginLR" >
+         <div class="form-group">
+         <label class="marginTop"for="productName">Enter The Product Name</label>
+         <input class="form-control" type="text" name="productName" ng-model='product.productName'placeholder="Apples" required/>
+       </div>
+       <div class="form-group">
+         <label class="marginTop" for="description">Prouct Description</label>
+        <textarea class="form-control" rows="4" cols="50" name="description" ng-model='product.description'></textarea>
+      </div>
+      <div class="form-group">
+         <label class="marginTop"for="productPrice">Enter The Product Price</label>
+         <input class="form-control" type="number" name="productPrice" ng-model='product.price'placeholder="2" required/>
+       </div>
+       <div class="form-group">
+         <label class="marginTop"for="isOrganic">Type of Product</label><br>
+         <select class="form-control" name="isOrganic" id="singleSelect" ng-model="product.selectType">
+          <option value="">---Please select---</option>
+          <option value="Organic">Eggs</option>
+          <option value="Fresh Produce">Fresh Produce</option>
+          <option value="Meat and Poultry">Meat and Poultry</option>
+          <option value="Other">Other</option>
+        </select><br>
+      </div>
+      <div class="form-group">
+        <label class="marginTop"for="isOrganic">Is this product organic?</label><br>
+        <select class="form-control" name="isOrganic" id="singleSelect" ng-model="product.selectOrg">
+          <option value="">---Please select---</option>
+          <option value="Organic">Organic</option>
+          <option value="Non-Organic">Non-Organic</option>
+        </select>
+      </div>
+      <!-- <div class="form-group">
+        <label class="marginTop"for="additionalInfo">Is this product organic?</label><br>
+        <select class="form-control" name="isOrganic" id="singleSelect" ng-model="product.additionalInfo">
+        <textarea class="form-control" rows="4" cols="50" name="additionalInfo" ng-model='product.additionalInfo'></textarea>
+        </select>
+      </div> -->
+        <a href='/#/farm/landing'><button class="btn btn-default" ng-click="product.submit()">Submit</button></a>
+        <div id='closeButton'>
+          <a href="/#/farm/landing"><button class="btn btn-default">Close</button></a>
+        </div>
+      </span>
+    </form>
+    </div>
+   </div>
+ </section>
+ </div>
+ </ion-content>
+</ion-view>

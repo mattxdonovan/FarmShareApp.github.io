@@ -1,0 +1,26 @@
+<ion-view view-title="productForm">
+  <ion-content>
+    <div class="formContain" ng-show="showFarmer">
+      <h1 class="marginBottom">Grower Sign Up</h1>
+      <form class="marginLR" >
+        <label class="marginTop"for="farmName">Please Enter Your Name</label>
+        <input type="text" name="farmName" ng-model='farmer.farmName'placeholder="First" required/>
+        <label class="marginTop" for="location">Where are you located</label>
+        <input type="text" name="location" ng-model='farmer.location' placeholder="City, State" required/>
+        <input type="text" name="phoneNumber" ng-model='farmer.phoneNumber'placeholder="Phone Number" required/>
+        <label class="marginTop" for="imageUrl">Picture URL</label>
+        <input type="url" name="imageUrl" ng-model='farmer.imageUrl'/>
+        <label class="marginTop" for="info">Info About Your Farm</label>
+        <textarea rows="4" cols="50" name="info" ng-model='farmer.info'></textarea>
+        <a href='/#/farm/landing'><button ng-click="farmer.submit()">Submit</button></a>
+        <div id='closeButton'>
+          <a href="/#/farm/landing"><button>Close</button></a>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
+<!--
+<div ng-repeat="produce in stuff.products">
+  <h1>{{produce}}</h1>
+</div> -->

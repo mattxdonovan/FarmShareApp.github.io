@@ -1,0 +1,51 @@
+<ion-view view-title="profile">
+  <ion-content>
+    <div class="backgroundResults overFlow">
+    <br>
+    <h1 class="center2">Product Listings</h1>
+    <div class="container col-sm-offset-1 col-sm-10 marginBottom">
+      <div class="card transparent">
+        <div class="card-group" ng-repeat="r in data">
+          <img height="200" width="300" class="card-img-top col-sm-3 padding5px" src="" alt="Card image cap">
+          <br>
+          <div class="card card-block cardBack col-sm-8 col-sm-offset-0">
+            <h1 class = 'card-title'>{{r.productName}}</h1>
+            <h3 class="card-title">{{r.description}}</h3>
+            <p class="card-text">{{r.productType}}</p>
+            <!-- <a href="/#/farm/farminfo/{{r.user_id}}" class="btn btn-primary pull-right">Visit: {{r.farmName}}</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class='mainContain'>
+      <div class='align marginBottom'>
+        <div class='userImage'>
+        </div>
+        <div class='marginTop marginLR'>
+          <h1>NAME</h1>
+          <h3>LOCATION</h3>
+        </div>
+      </div>
+      <div class="jumbotron align spaceAround">
+        <div class='marginLR center'>
+          <h3>Current Subscriptions</h3>
+        </div>
+        <div class='marginLR center'>
+          <h3>Seeking</h3>
+        </div>
+      </div>
+    </div> -->
+  </ion-content>
+</ion-view>

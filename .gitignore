@@ -1,0 +1,13 @@
+node_modules/
+.env
+http://54.183.201.172:3000/
+ssh -i Farmshare.pem ec2-user@ec2-54-183-201-172.us-west-1.compute.amazonaws.com
+
+Updating EC2 Instance:
+1. Delete old "FarmShare" directory from virtual machine.
+2. 'git clone https://github.com/GreyDelamar/FarmShare.git' onto virtual machine.
+3. 'meteor npm install --save'
+4  'meteor' to build and spin up server.
+
+Updating the EC2 instance w/o Git Clone (But don't ever do this)
+scp -i ./FarmShare/Farmshare.pem FarmShare.zip ec2-user@ec2-54-183-201-172.us-west-1.compute.amazonaws.com:~
