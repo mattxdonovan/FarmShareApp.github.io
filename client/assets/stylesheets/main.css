@@ -12,18 +12,10 @@
   background-repeat: no-repeat;
 }
 #landing{
-  max-height: 95vh;
+  /*max-height: 95vh;*/
   background-color: black;
   overflow-y: hidden !important;
 }
-.transparentMainText{
-  background: rgba(0,0,0,0.5);
-  margin-left: 25%;
-  margin-right: 25%;
-  border-radius: 10px;
-  z-index: 20;
-}
-
 .textBox{
   background-color: #ffffff;
   border: 1px solid black;
@@ -50,7 +42,6 @@ video {
   overflow-y: hidden;
   overflow-x: hidden;
 }
-
 video#videobg{
   z-index: -100;
 }
@@ -59,9 +50,9 @@ position: fixed;
 /*top: 50%;
 left: 50%;*/
 min-width: 100vw;
-min-height: 100%;
-width: auto;
-height: auto;
+min-height: 100vw;
+/*width: auto;
+height: auto;*/
 transform: translateX(-50%) translateY(-50%);
 background: url('images/poster.jpg') no-repeat;
 background-size: cover;
@@ -73,6 +64,75 @@ transition: 1s opacity;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+.videoContainer .overlay .subtext #farmshareText{
+    /*width:100%;*/
+    text-align:center;
+}
+#farmshareText {
+  position: fixed;
+  left: auto;
+  right: auto;
+  top: 25%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100% !important;
+  font-weight: 100;
+  padding: 10px;
+  color: #ffffff !important;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  border-radius: 15px;
+  text-align: center;
+}
+.mainText {
+  font-size: 2em;
+  color: #ffffff !important;
+}
+.subText{
+  /*top: 31%;*/
+  padding: 5px;
+  color: white !important;
+  z-index: 100;
+  font-size: 1.5em !important;
+}
+.bottomPlacement {
+  position: fixed;
+  bottom: 0;
+}
+.floatRight, .floatLeft {
+  text-decoration: none !important;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  font-size: 140% !important;
+  font-weight: bold;
+  /*margin-top: 30% !important;*/
+}
+/*.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  /*margin-top: 20% !important;*/
+
+.floatLeft {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+.floatRight{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+.floatRight > a, .floatLeft > a {
+  color: white !important;
 }
 .stopfade {
    opacity: .5;
@@ -89,55 +149,11 @@ transition: 1s opacity;
 a.linkcursor{
   cursor: pointer !important;
 }
-.centerDiv {
-  display: flex;
-  justify-content: center;
-  z-index: 100;
-  margin-top: -40vh;
-}
-.videoContainer .overlay .subtext #farmshareText{
-    width:100%;
-    text-align:center;
-}
-#farmshareText {
-  display: flex;
-  justify-content: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 100% !important;
-  line-height: 2 !important;
-  font-weight:100;
-  padding: 10px;
-  color: white !important;
-  z-index: 100;
-}
-.subText{
-  padding: 5px;
-  color: white !important;
-  z-index: 100;
-  border-radius: 10px;
-}
 
-.floatRight, .floatLeft {
-  text-decoration: none !important;
-  background: rgba(0,0,0,0.5);
-  padding: 20px;
-  font-size: 140% !important;
-  font-weight: bold;
-  /*margin-top: 30% !important;*/
-}
-.bottomButtons {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
-  margin-top: 20% !important;
-}
 .scroll {
   height: 100% !important;
 }
 
-.floatRight > a, .floatLeft > a {
-  color: white !important;
-}
 /*END OF VIDEO STyLING*/
 .flex{
   display: flex;
@@ -157,13 +173,14 @@ a.linkcursor{
   background-color: transparent !important;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
+  padding-right: 15px !important;
   position: relative !important;
   display: block !important;
   box-sizing: border-box !important;
   -webkit-tap-highlight-color: transparent !important;
   vertical-align: baseline !important;
   padding: 10px 15px;
-  width: 100px !important;
+  width: 170px !important;
   text-decoration: none !important;
 }
 a#login-sign-in-link.login-link-text {
@@ -183,7 +200,7 @@ a#login-sign-in-link.login-link-text:hover {
   border: black solid 1px;
 }
 .dropdownClass{
-  padding: 5px;
+  padding: 4px;
 }
 .farmSnapshot{
   width: 65%;
@@ -305,7 +322,15 @@ a#login-sign-in-link.login-link-text:hover {
   margin: 0 !important;
 
 }
-@media only screen and (min-width: 1290px) {
+@media only screen and (max-width: 5000px) {
+  video {
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 2000px) {
   video {
     -webkit-transform: scale(2);
     -moz-transform: scale(2);
@@ -313,13 +338,35 @@ a#login-sign-in-link.login-link-text:hover {
     overflow-x: hidden;
   }
 }
-@media only screen and (min-width: 1100px) {
-#farmshareText {
-  font-size:200% !important;
-  color: white;
+@media only screen and (max-width: 1600px) {
+  video {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 }
-
+@media only screen and (max-width: 1290px) {
+  video {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  video {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+@media only screen and (min-width: 921px) {
+  .subText {
+    font-size: 1.2em !important;
+  }
+}
 @media only screen and (max-width: 800px) {
   video {
     -webkit-transform: scale(1);
@@ -327,15 +374,20 @@ a#login-sign-in-link.login-link-text:hover {
     overflow-y: hidden;
     overflow-x: hidden;
   }
+  .subText {
+    font-size: 1.2em !important;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
   video {
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    overflow-y: hidden;
-    overflow-x: hidden;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
   }
+  .subText {
+    font-size: 1em !important;
+  }
+
 }
 
 .btn btn-default  {
